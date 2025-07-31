@@ -1,79 +1,79 @@
-Disaster Alert System – AWS Cloud Project
+**Disaster Alert System – AWS Cloud Project**
 This is a real-time, serverless alert system that fetches live weather data and sends notifications when extreme weather conditions like storms or heavy rain are detected.
 
-Tools and Technologies Used
-Programming & Scripting
-Python (Lambda function logic)
+**Tools and Technologies Used**
+1.Programming & Scripting
+1b.Python (Lambda function logic)
 
-Bash (project automation and CLI commands)
+2.Bash (project automation and CLI commands)
 
-JSON (IAM policy documents and API responses)
+3.JSON (IAM policy documents and API responses)
 
-Development Environment
-Ubuntu via Windows Subsystem for Linux (WSL)
+4.Development Environment
+4b.Ubuntu via Windows Subsystem for Linux (WSL)
 
-Virtual Environment (venv) for Python dependency isolation
+5.Virtual Environment (venv) for Python dependency isolation
 
-nano (for editing scripts and policy files)
+6.nano (for editing scripts and policy files)
 
-zip (for packaging Lambda deployment)
+7.zip (for packaging Lambda deployment)
 
-AWS Services
-AWS Lambda – runs the Python code serverlessly
+8.AWS Services
+8b.AWS Lambda – runs the Python code serverlessly
 
-Amazon SNS (Simple Notification Service) – sends email alerts
+9.Amazon SNS (Simple Notification Service) – sends email alerts
 
-Amazon EventBridge – schedules Lambda execution every 10 minutes
+10.Amazon EventBridge – schedules Lambda execution every 10 minutes
 
-IAM (Identity and Access Management) – manages roles and permissions
+11.IAM (Identity and Access Management) – manages roles and permissions
 
-AWS CLI
-Used extensively for:
+12.AWS CLI
+12b.Used extensively for:
 
-Creating and deploying the Lambda function
+13.Creating and deploying the Lambda function
 
-Creating SNS topics and subscriptions
+14.Creating SNS topics and subscriptions
 
-Creating EventBridge rules and targets
+15.Creating EventBridge rules and targets
 
-Attaching policies and setting permissions
+16.Attaching policies and setting permissions
 
-Third-Party API
+**Third-Party API**
 OpenWeatherMap API – provides real-time weather data
 
-Project Overview
+**Project Overview**
 A Lambda function fetches weather data from the OpenWeatherMap API every 10 minutes.
 
 If the weather description includes keywords like “storm,” “rain,” or “extreme,” it triggers an SNS email notification.
 
 The system is fully automated and serverless, requiring no manual monitoring or EC2 instances.
 
-How It Was Built
-The project was developed using the AWS CLI, Bash, and Python within a Linux environment (Ubuntu via WSL). Key steps included:
+**How It Was Built**
+1.The project was developed using the AWS CLI, Bash, and Python within a Linux environment (Ubuntu via WSL). Key steps included:
 
-Writing lambda_function.py for disaster detection and alerting.
+2.Writing lambda_function.py for disaster detection and alerting.
 
-Packaging the function using zip and deploying it via the AWS CLI.
+3.Packaging the function using zip and deploying it via the AWS CLI.
 
-Creating an SNS topic, subscribing an email address, and verifying it.
+4.Creating an SNS topic, subscribing an email address, and verifying it.
 
-Creating an IAM role with permissions for Lambda to publish to SNS.
+5.Creating an IAM role with permissions for Lambda to publish to SNS.
 
-Writing and attaching a custom inline policy (sns-policy.json) using CLI.
+6.Writing and attaching a custom inline policy (sns-policy.json) using CLI.
 
-Setting up a CloudWatch rule (via EventBridge) to schedule the Lambda function every 10 minutes.
+7.Setting up a CloudWatch rule (via EventBridge) to schedule the Lambda function every 10 minutes.
 
-Granting EventBridge permission to invoke the Lambda.
+8.Granting EventBridge permission to invoke the Lambda.
 
-Testing end-to-end functionality and troubleshooting issues like:
+9.Testing end-to-end functionality and troubleshooting issues like:
 
-Lambda not authorized to publish to SNS
+10.Lambda not authorized to publish to SNS
 
-Syntax errors in the Python code
+11.Syntax errors in the Python code
 
-EventBridge not triggering the function
+12.EventBridge not triggering the function
 
-Usage Notes
+**Usage Notes**
 This project is for educational and demonstration purposes. API keys and sensitive data are excluded. You’ll need to:
 
 Replace the placeholder API key and SNS topic ARN in the Lambda code
@@ -82,7 +82,7 @@ Ensure your IAM policies and roles are correctly configured
 
 Disable or delete the EventBridge rule when testing is complete to avoid unnecessary charges
 
-Author
+**Author**
 Temilade
 [LinkedIn](www.linkedin.com/in/temilade-akinyimika-dell001) | Medium Post
 
