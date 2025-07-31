@@ -98,5 +98,5 @@ Disable or delete the EventBridge rule when testing is complete to avoid unneces
 
 **Author**
 Temilade
-[LinkedIn](www.linkedin.com/in/temilade-akinyimika-dell001) | Medium Post
+[LinkedIn](www.linkedin.com/in/temilade-akinyimika-dell001) | [Medium Post](https://medium.com/@temiladedell/aws-cloud-project-part-1-building-a-real-time-disaster-notification-system-6407b4d6b69b)
 
