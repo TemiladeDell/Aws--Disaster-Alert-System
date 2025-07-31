@@ -3,8 +3,8 @@ import requests
 import boto3
 
 def lambda_handler(event, context):
-	API_KEY = "a0da05df5a31fac16992bd7f7fd2937b"
-	CITY = "Lagos"
+	API_KEY = "your API KEY"
+	CITY = "Location you want to use"
 	URL = f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}"
 
 	response = requests.get(URL)
@@ -16,7 +16,7 @@ def lambda_handler(event, context):
 		if 'storm' in description or 'rain' in description or 'extreme' in description:
 			sns = boto3.client('sns')
 			sns.publish(
-				TopicArn ='arn:aws:sns:us-east-1:274603885640:disaster-alert-topic',
+				TopicArn ='topic-arn from aws',
 				Message = f"Weather alert for {CITY}: {description}",
 				Subject = 'Disaster Alert System'
 			)
