@@ -1,5 +1,9 @@
+
+
 **Disaster Alert System – AWS Cloud Project**
 This is a real-time, serverless alert system that fetches live weather data and sends notifications when extreme weather conditions like storms or heavy rain are detected.
+
+
 
 **Tools and Technologies Used**
 1.Programming & Scripting
@@ -38,8 +42,12 @@ This is a real-time, serverless alert system that fetches live weather data and 
 
 16.Attaching policies and setting permissions
 
+
+
 **Third-Party API**
 OpenWeatherMap API – provides real-time weather data
+
+
 
 **Project Overview**
 A Lambda function fetches weather data from the OpenWeatherMap API every 10 minutes.
@@ -47,6 +55,8 @@ A Lambda function fetches weather data from the OpenWeatherMap API every 10 minu
 If the weather description includes keywords like “storm,” “rain,” or “extreme,” it triggers an SNS email notification.
 
 The system is fully automated and serverless, requiring no manual monitoring or EC2 instances.
+
+
 
 **How It Was Built**
 1.The project was developed using the AWS CLI, Bash, and Python within a Linux environment (Ubuntu via WSL). Key steps included:
@@ -73,6 +83,8 @@ The system is fully automated and serverless, requiring no manual monitoring or 
 
 12.EventBridge not triggering the function
 
+
+
 **Usage Notes**
 This project is for educational and demonstration purposes. API keys and sensitive data are excluded. You’ll need to:
 
@@ -81,6 +93,8 @@ Replace the placeholder API key and SNS topic ARN in the Lambda code
 Ensure your IAM policies and roles are correctly configured
 
 Disable or delete the EventBridge rule when testing is complete to avoid unnecessary charges
+
+
 
 **Author**
 Temilade
